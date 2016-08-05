@@ -3,19 +3,25 @@
   <head>
     <link rel="stylesheet" href="build/css/styles.css">
     <script src="build/js/vendor.min.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
     <script type="text/javascript" src="build/js/app.js"></script>
     <title>Search Github Users</title>
   </head>
   <body>
+    <div class="header">
+      <img src="img/mark-github-256.png" alt="github icon" />
+      <h1>Git it</h1>
+    </div>
     <div class="container">
       <div class="box">
         <label for="user-info">Enter user info:</label>
         <input id="user" type="text">
         <button class="button" id="inputUser">Submit</button>
-        <div class="showResults"></div>
+        <div class="showResults">
         <ul id= "public-repos">
 
         </ul>
+        </div>
       </div>
     </div>
   </body>
