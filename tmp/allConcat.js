@@ -1,9 +1,9 @@
-var getRepos = require('./../js/github.js').githubModule;
+var Github = require('./../js/github.js').githubModule;
 
 $(document).ready(function() {
-  var inputUserObject = new getRepos();
+  var inputUserObject = new Github();
   $('#inputUser').click(function() {
-    var userName = $('#inputUser').val();
-    inputUserObject.getUserInfo(userName);
+    var userInfo = $('#inputUser').val("");
+    inputUserObject.getUserInfo(userInfo);
     });
   });
