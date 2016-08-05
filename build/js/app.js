@@ -5,19 +5,18 @@ exports.apiKey = "69251fbd390b37c81bb43ff389647768233776e2";
 var apiKey = require('./../.env').apiKey;
 
 function Github() {
-
 }
 
 Github.prototype.getUserInfo = function(userInfo) {
-  $.get('https://api.github.com/users/' + userInfo +  '/repos?access_token=' + apiKey).then(function(response) {
-    $('#showresults').empty();
-        for(var i = 0; i < response.length; i++) {
-          ('#showresults').append("<li>" + response[i].name + " " + response[i].description + "</li>");
-        }
-      }).fail(function(error){
- console.log(error.responseJSON.message);
- $('#error-show').show();
-});
+  $.get('https://api.github.com/users/' + userInfo +  '/repos?&per_page=100&access_token=' + apiKey).then(function(response){
+    $('#public-repos').empty();
+    for(var i = 0; i < response.length; i++) {
+      $('#public-repos').append("<li>" + response[i].name + " " + response[i].description + "</li>");
+    };
+  }).fail(function(error){
+    console.log(error.responseJSON.message);
+ // $('.showResults').show();
+  });
 };
 
 
@@ -29,9 +28,10 @@ var Github = require('./../js/github.js').githubModule;
 $(document).ready(function() {
   var inputUserObject = new Github();
   $('#inputUser').click(function() {
-    var userInfo = $('#inputUser').val("");
+    var userInfo = $('#user-info').val();
+    $('#user-info').val("");
     inputUserObject.getUserInfo(userInfo);
-    });
   });
+});
 
 },{"./../js/github.js":2}]},{},[3]);
