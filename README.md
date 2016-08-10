@@ -10,17 +10,21 @@ _This is an application which enables a user to input a GitHub username and retu
 
 ## Setup/Installation Requirements
 
-Clone this repository 
+Clone my repository 
+
+Create a .env file in the top level of this project and add: exports.apiKey = “69251fbd390b37c81bb43ff389647768233776e2”;
 
 Run command $ npm install to install Node.js packages
 
 Run command $ bower install to install Bower packages
 
-Run command $ gulp build --production
+Run command $ gulp build
 
 Run command $ gulp serve
 
 Open index.html file in your browser
+
+Enter GitHub username to get their repository information
 
 ## Technologies Used
 
