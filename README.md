@@ -12,8 +12,6 @@ _This is an application which enables a user to input a GitHub username and retu
 
 Clone my repository 
 
-Create a .env file in the top level of this project and add: exports.apiKey = “69251fbd390b37c81bb43ff389647768233776e2”;
-
 Run command $ npm install to install Node.js packages
 
 Run command $ bower install to install Bower packages
